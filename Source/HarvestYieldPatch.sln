@@ -1,9 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarvestYieldPatch", "HarvestYieldPatch.csproj", "{282A8B32-1B93-4905-A121-5748DCFB4F64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HarvestYieldPatch", "HarvestYieldPatch\HarvestYieldPatch.csproj", "{504A06E1-C84C-43A8-A2C1-7F9E3489BF54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{282A8B32-1B93-4905-A121-5748DCFB4F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{282A8B32-1B93-4905-A121-5748DCFB4F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{282A8B32-1B93-4905-A121-5748DCFB4F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{282A8B32-1B93-4905-A121-5748DCFB4F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{504A06E1-C84C-43A8-A2C1-7F9E3489BF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{504A06E1-C84C-43A8-A2C1-7F9E3489BF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{504A06E1-C84C-43A8-A2C1-7F9E3489BF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{504A06E1-C84C-43A8-A2C1-7F9E3489BF54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3688AC47-95AA-4DB8-BA30-831D89C091B0}
+		SolutionGuid = {033d8e48-75c7-4930-bcd5-b3417b00709e}
 	EndGlobalSection
 EndGlobal

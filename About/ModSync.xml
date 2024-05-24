@@ -1,14 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModSyncNinjaData>
-  <ID>5e2389f9-7a3e-4a01-9c32-ca2b0577f0a6</ID>
-  <ModName>[SYR] Harvest Yield Patch</ModName>
-  <Version>1.2.0</Version>
+  <ID>64f7010d-05c5-44e9-b66b-1582cdeea5fc</ID>
+  <ModName>[SYR] Harvest Yield (Continued)</ModName>
+  <Version>1.5.1</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
-    <Owner>Syrchalis</Owner>
-    <Project>HarvestYield</Project>
+    <Owner>emipa606</Owner>
+    <Project>SYRHarvestYield</Project>
     <AboutDir>About</AboutDir>
-    <DownloadFrom>ModSyncReleases</DownloadFrom>
+    <DownloadFrom>ModSyncMainPage</DownloadFrom>
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
+
+
+
+
+

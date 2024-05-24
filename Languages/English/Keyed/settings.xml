@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <HarvestYieldSettingsCategory>Harvest Yield</HarvestYieldSettingsCategory>
-  
   <HarvestYieldMax>Max plant harvest yield</HarvestYieldMax>
   <HarvestYieldMaxTooltip>Maximum amount of plant harvest yield a pawn can ever have</HarvestYieldMaxTooltip>
   <AnimalYieldMax>Max animal gather yield</AnimalYieldMax>
@@ -13,5 +11,5 @@
   <ButcherFleshYieldMaxTooltip>Maximum amount of flesh butchery efficiency a pawn can ever have</ButcherFleshYieldMaxTooltip>
   <ButcherMechYieldMax>Max mechanoid butchery efficiency</ButcherMechYieldMax>
   <ButcherMechYieldMaxTooltip>Maximum amount of mechanoid butchery efficiency a pawn can ever have</ButcherMechYieldMaxTooltip>
-
+  <HYP.CurrentModVersion>Installed mod-version: {0}</HYP.CurrentModVersion>
 </LanguageData>
