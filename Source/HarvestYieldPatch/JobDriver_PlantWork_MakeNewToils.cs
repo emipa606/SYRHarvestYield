@@ -7,19 +7,21 @@ using Verse;
 
 namespace HarvestYieldPatch;
 
-public static class PlantYieldPatch
+[HarmonyPatch(typeof(JobDriver_PlantWork), "MakeNewToils")]
+public static class JobDriver_PlantWork_MakeNewToils
 {
-    public static readonly MethodInfo NewYieldNowMethod = typeof(PlantYieldPatch).GetMethod(nameof(YieldNowPatch));
+    private static readonly MethodInfo newYieldNowMethod =
+        typeof(JobDriver_PlantWork_MakeNewToils).GetMethod(nameof(YieldNowPatch));
 
     public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
     {
-        var YieldNow = AccessTools.Method(typeof(Plant), nameof(Plant.YieldNow));
+        var yieldNow = AccessTools.Method(typeof(Plant), nameof(Plant.YieldNow));
         foreach (var instruction in instructions)
         {
-            if (instruction.opcode == OpCodes.Callvirt && (MethodInfo)instruction.operand == YieldNow)
+            if (instruction.opcode == OpCodes.Callvirt && (MethodInfo)instruction.operand == yieldNow)
             {
                 yield return new CodeInstruction(OpCodes.Ldloc_0);
-                yield return new CodeInstruction(OpCodes.Call, NewYieldNowMethod);
+                yield return new CodeInstruction(OpCodes.Call, newYieldNowMethod);
             }
             else
             {

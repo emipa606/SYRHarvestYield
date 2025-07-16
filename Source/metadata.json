@@ -2,5 +2,18 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "0",
-  "PreviewVersion": "1.5"
+  "PreviewVersion": "1.6",
+  "Patches": true,
+  "Defs": false,
+  "Assemblies": true,
+  "LinesOfCode": 12891,
+  "LinesOfXML": 293,
+  "CodeBaseSize": 65,
+  "LastXmlCleaning": "2025-07-16T21:19:31.4120029+02:00",
+  "SocialImageSet": true,
+  "SearchTags": [
+    " plants",
+    " animals",
+    " yield"
+  ]
 }

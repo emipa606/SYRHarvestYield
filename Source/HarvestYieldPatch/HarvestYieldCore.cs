@@ -7,13 +7,13 @@ namespace HarvestYieldPatch;
 
 public class HarvestYieldCore : Mod
 {
-    public static HarvestYieldSettings settings;
+    public static HarvestYieldSettings Settings;
     private static string currentVersion;
 
     public HarvestYieldCore(ModContentPack content)
         : base(content)
     {
-        settings = GetSettings<HarvestYieldSettings>();
+        Settings = GetSettings<HarvestYieldSettings>();
         currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
@@ -24,96 +24,96 @@ public class HarvestYieldCore : Mod
 
     public override void DoSettingsWindowContents(Rect inRect)
     {
-        var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(inRect);
-        if (HarvestYieldSettings.plantYieldMax > 5f)
+        var listingStandard = new Listing_Standard();
+        listingStandard.Begin(inRect);
+        if (HarvestYieldSettings.PlantYieldMax > 5f)
         {
-            listing_Standard.Label("HarvestYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
+            listingStandard.Label("HarvestYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
                 "HarvestYieldMaxTooltip".Translate());
         }
         else
         {
-            listing_Standard.Label(
-                "HarvestYieldMax".Translate() + ": " + HarvestYieldSettings.plantYieldMax.ToStringPercent(), -1f,
+            listingStandard.Label(
+                "HarvestYieldMax".Translate() + ": " + HarvestYieldSettings.PlantYieldMax.ToStringPercent(), -1f,
                 "HarvestYieldMaxTooltip".Translate());
         }
 
-        listing_Standard.Gap(6f);
-        HarvestYieldSettings.plantYieldMax =
-            listing_Standard.Slider(GenMath.RoundTo(HarvestYieldSettings.plantYieldMax, 0.1f), 1f, 5.1f);
-        listing_Standard.Gap();
-        if (HarvestYieldSettings.animalYieldMax > 5f)
+        listingStandard.Gap(6f);
+        HarvestYieldSettings.PlantYieldMax =
+            listingStandard.Slider(GenMath.RoundTo(HarvestYieldSettings.PlantYieldMax, 0.1f), 1f, 5.1f);
+        listingStandard.Gap();
+        if (HarvestYieldSettings.AnimalYieldMax > 5f)
         {
-            listing_Standard.Label("AnimalYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
+            listingStandard.Label("AnimalYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
                 "AnimalYieldMaxTooltip".Translate());
         }
         else
         {
-            listing_Standard.Label(
-                "AnimalYieldMax".Translate() + ": " + HarvestYieldSettings.animalYieldMax.ToStringPercent(), -1f,
+            listingStandard.Label(
+                "AnimalYieldMax".Translate() + ": " + HarvestYieldSettings.AnimalYieldMax.ToStringPercent(), -1f,
                 "AnimalYieldMaxTooltip".Translate());
         }
 
-        listing_Standard.Gap(6f);
-        HarvestYieldSettings.animalYieldMax =
-            listing_Standard.Slider(GenMath.RoundTo(HarvestYieldSettings.animalYieldMax, 0.1f), 1f, 5.1f);
-        listing_Standard.Gap();
-        if (HarvestYieldSettings.miningYieldMax > 5f)
+        listingStandard.Gap(6f);
+        HarvestYieldSettings.AnimalYieldMax =
+            listingStandard.Slider(GenMath.RoundTo(HarvestYieldSettings.AnimalYieldMax, 0.1f), 1f, 5.1f);
+        listingStandard.Gap();
+        if (HarvestYieldSettings.MiningYieldMax > 5f)
         {
-            listing_Standard.Label("MiningYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
+            listingStandard.Label("MiningYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
                 "MiningYieldMaxTooltip".Translate());
         }
         else
         {
-            listing_Standard.Label(
-                "MiningYieldMax".Translate() + ": " + HarvestYieldSettings.miningYieldMax.ToStringPercent(), -1f,
+            listingStandard.Label(
+                "MiningYieldMax".Translate() + ": " + HarvestYieldSettings.MiningYieldMax.ToStringPercent(), -1f,
                 "MiningYieldMaxTooltip".Translate());
         }
 
-        listing_Standard.Gap(6f);
-        HarvestYieldSettings.miningYieldMax =
-            listing_Standard.Slider(GenMath.RoundTo(HarvestYieldSettings.miningYieldMax, 0.1f), 1f, 5.1f);
-        listing_Standard.Gap();
-        if (HarvestYieldSettings.butcherFleshYieldMax > 5f)
+        listingStandard.Gap(6f);
+        HarvestYieldSettings.MiningYieldMax =
+            listingStandard.Slider(GenMath.RoundTo(HarvestYieldSettings.MiningYieldMax, 0.1f), 1f, 5.1f);
+        listingStandard.Gap();
+        if (HarvestYieldSettings.ButcherFleshYieldMax > 5f)
         {
-            listing_Standard.Label("ButcherFleshYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
+            listingStandard.Label("ButcherFleshYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
                 "ButcherFleshYieldMaxTooltip".Translate());
         }
         else
         {
-            listing_Standard.Label(
-                "ButcherFleshYieldMax".Translate() + ": " + HarvestYieldSettings.butcherFleshYieldMax.ToStringPercent(),
+            listingStandard.Label(
+                "ButcherFleshYieldMax".Translate() + ": " + HarvestYieldSettings.ButcherFleshYieldMax.ToStringPercent(),
                 -1f, "ButcherFleshYieldMaxTooltip".Translate());
         }
 
-        listing_Standard.Gap(6f);
-        HarvestYieldSettings.butcherFleshYieldMax =
-            listing_Standard.Slider(GenMath.RoundTo(HarvestYieldSettings.butcherFleshYieldMax, 0.1f), 1f, 5.1f);
-        listing_Standard.Gap();
-        if (HarvestYieldSettings.butcherMechYieldMax > 5f)
+        listingStandard.Gap(6f);
+        HarvestYieldSettings.ButcherFleshYieldMax =
+            listingStandard.Slider(GenMath.RoundTo(HarvestYieldSettings.ButcherFleshYieldMax, 0.1f), 1f, 5.1f);
+        listingStandard.Gap();
+        if (HarvestYieldSettings.ButcherMechYieldMax > 5f)
         {
-            listing_Standard.Label("ButcherMechYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
+            listingStandard.Label("ButcherMechYieldMax".Translate() + ": " + "Unlimited".Translate(), -1f,
                 "ButcherMechYieldMaxTooltip".Translate());
         }
         else
         {
-            listing_Standard.Label(
-                "ButcherMechYieldMax".Translate() + ": " + HarvestYieldSettings.butcherMechYieldMax.ToStringPercent(),
+            listingStandard.Label(
+                "ButcherMechYieldMax".Translate() + ": " + HarvestYieldSettings.ButcherMechYieldMax.ToStringPercent(),
                 -1f, "ButcherMechYieldMaxTooltip".Translate());
         }
 
-        listing_Standard.Gap(6f);
-        HarvestYieldSettings.butcherMechYieldMax =
-            listing_Standard.Slider(GenMath.RoundTo(HarvestYieldSettings.butcherMechYieldMax, 0.1f), 1f, 5.1f);
+        listingStandard.Gap(6f);
+        HarvestYieldSettings.ButcherMechYieldMax =
+            listingStandard.Slider(GenMath.RoundTo(HarvestYieldSettings.ButcherMechYieldMax, 0.1f), 1f, 5.1f);
         if (currentVersion != null)
         {
-            listing_Standard.Gap();
+            listingStandard.Gap();
             GUI.contentColor = Color.gray;
-            listing_Standard.Label("HYP.CurrentModVersion".Translate(currentVersion));
+            listingStandard.Label("HYP.CurrentModVersion".Translate(currentVersion));
             GUI.contentColor = Color.white;
         }
 
-        listing_Standard.End();
+        listingStandard.End();
     }
 
     public override void WriteSettings()
@@ -125,16 +125,16 @@ public class HarvestYieldCore : Mod
     public static void UpdateMaxValues()
     {
         StatDefOf.PlantHarvestYield.maxValue =
-            HarvestYieldSettings.plantYieldMax > 5f ? 9999999f : HarvestYieldSettings.plantYieldMax;
+            HarvestYieldSettings.PlantYieldMax > 5f ? 9999999f : HarvestYieldSettings.PlantYieldMax;
         StatDefOf.AnimalGatherYield.maxValue =
-            HarvestYieldSettings.animalYieldMax > 5f ? 9999999f : HarvestYieldSettings.animalYieldMax;
+            HarvestYieldSettings.AnimalYieldMax > 5f ? 9999999f : HarvestYieldSettings.AnimalYieldMax;
         StatDefOf.MiningYield.maxValue =
-            HarvestYieldSettings.miningYieldMax > 5f ? 9999999f : HarvestYieldSettings.miningYieldMax;
-        HarvestYieldDefOf.ButcheryFleshEfficiency.maxValue = HarvestYieldSettings.butcherFleshYieldMax > 5f
+            HarvestYieldSettings.MiningYieldMax > 5f ? 9999999f : HarvestYieldSettings.MiningYieldMax;
+        HarvestYieldDefOf.ButcheryFleshEfficiency.maxValue = HarvestYieldSettings.ButcherFleshYieldMax > 5f
             ? 9999999f
-            : HarvestYieldSettings.butcherFleshYieldMax;
-        HarvestYieldDefOf.ButcheryMechanoidEfficiency.maxValue = HarvestYieldSettings.butcherMechYieldMax > 5f
+            : HarvestYieldSettings.ButcherFleshYieldMax;
+        HarvestYieldDefOf.ButcheryMechanoidEfficiency.maxValue = HarvestYieldSettings.ButcherMechYieldMax > 5f
             ? 9999999f
-            : HarvestYieldSettings.butcherMechYieldMax;
+            : HarvestYieldSettings.ButcherMechYieldMax;
     }
 }
